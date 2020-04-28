@@ -26,7 +26,7 @@ public class Producer {
     @Column(name = "NAME", nullable =  false)
     private String name;
 
-    @OneToMany(mappedBy = "producer")
+    @OneToMany(mappedBy = "producer", cascade=CascadeType.REMOVE)
     private List<Product> productList = new ArrayList();
 
     public Producer() {

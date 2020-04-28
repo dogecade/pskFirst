@@ -87,4 +87,9 @@ public class PersistenceController implements Serializable {
 
         receiverToAssign.setProductList(productList);
     }
+
+    @Transactional
+    public void deleteProduct(Integer id) {
+        productsDAO.delete(id);
+    }
 }

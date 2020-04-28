@@ -6,6 +6,7 @@ import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import java.util.List;
+import java.util.PrimitiveIterator;
 
 @ApplicationScoped
 public class ProductsDAO {
@@ -27,4 +28,6 @@ public class ProductsDAO {
     public Product update(Product product){
         return em.merge(product);
     }
+
+    public void delete(Integer id) { this.em.remove(em.find(Product.class, id)); }
 }

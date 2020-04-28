@@ -1,11 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="jdbc:h2:mem:FactoryDB" uuid="972a8d30-24b8-4449-9bf9-42cd437bd17d">
+    <data-source source="LOCAL" name="H2 -" uuid="aaacfacc-0cdb-4887-80d4-f196e95b3a0d">
       <driver-ref>h2.unified</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.h2.Driver</jdbc-driver>
-      <jdbc-url>jdbc:h2:mem:FactoryDB</jdbc-url>
+      <jdbc-url>jdbc:h2:mem:</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="jdbc:h2:tcp://localhost:8081/" uuid="86206199-b76f-4e9f-a50b-c7c03ea17942">
+      <driver-ref>h2.unified</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.h2.Driver</jdbc-driver>
+      <jdbc-url>jdbc:h2:tcp://localhost:8082/</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="jdbc:h2:tcp://localhost/~/test" uuid="fc57cc22-9afb-4bd9-ac85-c9f51ee061d5">
+      <driver-ref>h2.unified</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.h2.Driver</jdbc-driver>
+      <jdbc-url>jdbc:h2:tcp://localhost/~/test</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="test" uuid="aec56666-d3d7-4288-ad2c-5eea3e247693">
+      <driver-ref>h2.unified</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.h2.Driver</jdbc-driver>
+      <jdbc-url>jdbc:h2:mem:test;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE</jdbc-url>
     </data-source>
   </component>
 </project>

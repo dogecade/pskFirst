@@ -35,7 +35,7 @@ public class Product implements Serializable {
     @JoinColumn(name = "PRODUCER_ID")
     private Producer producer;
 
-    @ManyToMany(mappedBy = "productList")
+    @ManyToMany(mappedBy = "productList", cascade = CascadeType.REMOVE)
     private List<Receiver> receiverList = new ArrayList();
 
     @Version
