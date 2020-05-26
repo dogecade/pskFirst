@@ -12,6 +12,8 @@
 
 <h:body>
     <h1>JPA</h1>
+
+    <h2> Generated number #{persistenceController.getNumber()} </h2>
     <h:form>
         <p:fieldset legend="All products that were found" toggleable="true" style="width: 50%">
             <p:dataTable value="#{persistenceController.products}" var="product">
@@ -32,7 +34,7 @@
                     <p:commandButton value="Delete"
                                      actionListener="#{persistenceController.deleteProduct(product.id)}"
                                      action="jpa-usecase?faces-redirect=true"
-                                     ajax="false"/>
+                                     ajax="true"/>
                 </p:column>
             </p:dataTable>
         </p:fieldset>

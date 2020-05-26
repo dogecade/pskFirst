@@ -27,6 +27,9 @@ public class PersistenceController implements Serializable {
     @Inject
     private ReceiversDAO receiversDAO;
 
+    @Inject
+    private INumberGenerator numberGenerator;
+
     @Getter
     private  Producer producer = new Producer();
     @Getter
@@ -90,6 +93,20 @@ public class PersistenceController implements Serializable {
 
     @Transactional
     public void deleteProduct(Integer id) {
-        productsDAO.delete(id);
+        try {
+            Thread.sleep(3000);
+
+            productsDAO.delete(id);
+
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } {
+
+        }
+    }
+
+    @Transactional
+    public int getNumber() {
+        return numberGenerator.generateInt();
     }
 }
